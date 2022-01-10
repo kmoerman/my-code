@@ -1,0 +1,12 @@
+name: Workflow with my tool
+on:
+  - workflow_dispatch
+
+jobs:
+  use-tool:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: kmoerman/my-tool@master
+        with:
+          file: code.js
